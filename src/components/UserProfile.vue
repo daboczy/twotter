@@ -117,46 +117,51 @@ export default {
 </script>
 
 
-<style>
+<style lang="scss" scoped>
 .user-profile {
   display: grid;
   grid-template-columns: 1fr 3fr;
   width: 100%;
   padding: 50px 5%;
+
+  .user-profile__user-panel {
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #DFE3E8;
+  
+    h1 {
+      margin: 0;
+    }
+
+    .user-profile__admin-badge {
+      background: rebeccapurple;
+      color: white;
+      border-radius: 5px;
+      margin-right: auto;
+      padding: 0 10px;
+      font-weight: bold;
+    }
+
+    .user-profile__create_twoot {
+      border-top: 1px solid #DFE3E8;
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .user-profile__twoot-wrapper {
+    display: grid;
+    grid-gap: 10px;
+  }
 }
 
-.user-profile__user-panel {
-  display: flex;
-  flex-direction: column;
-  margin-right: 50px;
-  padding: 20px;
-  background-color: white;
-  border-radius: 5px;
-  border: 1px solid #DFE3E8;
-}
 
-.user-profile__admin-badge {
-  background: rebeccapurple;
-  color: white;
-  border-radius: 5px;
-  margin-right: auto;
-  padding: 0 10px;
-  font-weight: bold;
-}
 
-h1 {
-  margin: 0;
-}
 
-.user-profile__twoot-wrapper {
-  display: grid;
-  grid-gap: 10px;
-}
 
-.user-profile__create_twoot {
-  border-top: 1px solid #DFE3E8;
-  padding-top: 20px;
-  display: flex;
-  flex-direction: column;
-}
 </style>
