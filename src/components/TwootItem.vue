@@ -1,7 +1,7 @@
 <template>
-  <div class="twoot-item" v-on:click="favouriteTwoot(twoot.id)">
+  <div class="twoot-item">
     <div class="user-profile__twoot">
-      <div class="twoot-item__user"> 
+      <div class="twoot-item__user">
         @{{ username }}
       </div>
       <div class="twoot-item__content">
@@ -14,24 +14,16 @@
 <script>
 export default {
   name: "TwootItem",
-
   props: {
     username: {
       type: String,
-      required: true,
+      required: true
     },
-
     twoot: {
       type: Object,
-      required: true,
-    },
-  },
-
-  methods: {
-    favouriteTwoot(id){
-      this.$emit('favourite', id)
+      required: true
     }
-  },
+  }
 };
 </script>
 
@@ -53,6 +45,4 @@ export default {
     font-weight: bold;
   }
 }
-
-
 </style>
